@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ADD BOOK</title>
+<style>
+.dropbtn {
+  background-image: linear-gradient(to bottom right, white,brown);
+  color: white;
+  padding: 16px;
+ font-size: 20px;
+	  font-style: italic;
+font-weight:bold;
+	font-family: georgia,garamond,serif;
+}
+
+.dropdown {
+ float:right;
+ margin-right:5px;
+  display: inline-block;
+}
+
+.dropdown-content {overflow: hidden;
+	font-size: 15px;
+	  font-style: italic;
+		color: red;
+font-weight:bold;
+	font-family: georgia,garamond,serif;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 60px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-image: linear-gradient(to bottom right, red, yellow);}
+
+.dropdown:hover .dropdown-content {display: list-item;}
+
+.dropdown:hover .dropbtn {background-image: linear-gradient(to bottom right, #0000ff, white);}
+
+
+.btn {
+	background-color: #d1e0e0;
+	width: 50%;
+	align: center;
+	font-size: 20px;
+	color: white;
+	padding: 15px;
+	border: none;
+	cursor: pointer;
+	border-radius: 15px;
+}
+
+form {
+	align: center;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-down: 10px;
+	margin-left: auto;
+}
+
+.dropbtn {
+  background-color: ;
+  color: white;
+  padding: 16px;
+ font-size: 20px;
+	  font-style: italic;
+font-weight:bold;
+	font-family: georgia,garamond,serif;
+}
+
+.dropdown {
+ float:right;
+ margin-right:5px;
+  display: inline-block;
+}
+
+.dropdown-content {overflow: hidden;
+	font-size: 15px;
+	  font-style: italic;
+		color: red;
+font-weight:bold;
+	font-family: georgia,garamond,serif;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-image: linear-gradient(to bottom right, red, yellow);}
+
+.dropdown:hover .dropdown-content {display: list-item;}
+
+.dropdown:hover .dropbtn {background-image: linear-gradient(to bottom right, #0000ff, white);}
+
+input[type=text], input[type=text], input[type=text], input[type=number],
+	#subject, #avail {
+	width: 100%;
+	margin: 8px 0;
+	padding: 12px 20px;
+	display: inline-block;
+	border: 1.5px solid grey;
+	box-sizing: border-box;
+	border-radius: 12px;
+	font-size: 17px;
+	background-image: linear-gradient(to bottom right, white, #e6e6e6);
+}
+
+.btn:hover {
+	opacity: 0.7;
+}
+
+.container img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100px;
+	width: 100px;
+}
+
+.container {
+	background-image: linear-gradient(to right, #ccff66, white);
+	position: center;
+	margin: auto;
+	align: center;
+	max-width: 400px;
+	padding: 15px;
+	border-radius: 25px;
+	box-shadow: 2px 2px 3px 5px grey;
+}
+
+body {
+background-image: linear-gradient(to right, rgb(231, 231, 194), rgb(96, 231, 194));	background-color: #cccccc;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.input-icons i {
+	position: absolute;
+}
+
+.input-icons {
+	width: 100%;
+	margin-bottom: 0px;
+}
+
+.icon {
+	padding: 10px;
+	min-width: 50px;
+}
+
+.input-field {
+	width: 100%;
+	padding: 5px;
+	text-align: center;
+}
+
+.btn {
+	width: 40%;
+	margin-left: 126px;
+	background-color: black;
+}
+
+.cl, b {
+	color: white;
+}
+
+
+
+.btn-bottom {
+	float: right;
+	margin-top: 30px;
+	margin-right: 10px;
+	background-color: grey;
+	align: center;
+	font-size: 20px;
+	color: black;
+	padding: 10px;
+	border: none;
+	cursor: pointer;
+	border-radius: 6px;
+}
+</style>
+<script>
+function myFunction() {
+
+  
+       var ISBNNo = document.getElementById("txtIsbn").value;
+            var isbnThirteenDigit = /^\d{13}$/;
+            if (ISBNNo != '') {
+                if (ISBNNo.match(isbnThirteenDigit)) {
+                    document.getElementById('message1').style.color = 'green';
+    document.getElementById('message1').innerHTML = 'valid';
+                }
+                else {
+                    document.getElementById('message1').style.color = 'red';
+    document.getElementById('message1').innerHTML = 'Invalid';
+                }
+            }
+}
+
+</script>
+</head>
+
+<body>
+	<img class="logo" src="image/logo7.png" width="200px" height="150px" style="float: left; margin-top: 0px;">
+
+
+<div class="dropdown">
+  <h class="dropbtn">Logout</h>
+   <div class="dropdown-content">
+    <a href="AdminLogoutServlet">Logout</a>
+  </div></div>
+
+<div class="dropdown">
+   <h class="dropbtn">Book Statistics</h>
+  <div class="dropdown-content">
+    <a href="ViewAllBooks">View All Books</a>
+    <a href="ViewIssueBook">View
+				Issued Books</a>
+    <a href="ViewReturn">View Returned Book</a>
+  </div>
+  
+  
+</div>
+
+  <div class="dropdown">
+   <h class="dropbtn">Manage Users</h>
+  <div class="dropdown-content">
+    <a href="userServlet">View User</a>
+    <a href="VerificationServlet">View
+				Pending User</a>
+    <a href="updateStudent.jsp">Update
+				 User </a>
+  </div>
+  
+</div>
+<div class="dropdown">
+
+  <h class="dropbtn">Manage Books</h>
+  <div class="dropdown-content">
+    <a href="bookadmin.jsp">Search Book </a>
+    <a href="Updatebook.jsp">Update Book</a>
+    <a href="Addbook.html">Add Book</a>
+     <a href="deletebooks.jsp">Delete Book</a>
+  </div></div>
+  <br><br>  <br><br>
+    
+  
+	<form action=AddBookServlet method=get>
+		<div class="container">
+			<center>
+				<h1 style="color: black;">ADD BOOK</h1>
+			</center>
+
+			<label style="color: black;">ISBN: </label> <input type="text"
+				placeholder="Enter isbn" id="txtIsbn"
+				title="enter valid ISBN number" name="code" onkeyup="myFunction();"
+				required><span id='message1'></span> <br /> <label
+				style="color: black;">Book Name : </label> <input type="text"
+				id="name1" placeholder="Ex.-The Rainbow" name="Title"
+				title="Name only contains Alphabets" onKeyUp="Names();" required><br />
+			<script>
+      function Names(){
+  var x = document.getElementById("name1");
+  x.value = x.value.toUpperCase();
+   }
+	</script>
+			<label style="color: black;">Select Category: </label> <input
+				list="category" placeholder="select category" id="subject"
+				name="category">
+			<datalist id="category">
+				<option value="Computers">
+				<option value="Chemistry">
+				<option value="Biology">
+				<option value="Physics">
+				<option value="Mathematics">
+			</datalist>
+			<label style="color: black;">Author Name : </label> <input
+				type="text" placeholder="Ex.-R.D Sharma" id="author" name="Author"  title="Name only contains Alphabets" onKeyUp="Name();"required>
+<script>
+function Name() {
+  var x = document.getElementById("author");
+  x.value = x.value.toUpperCase();
+}
+	</script>			
+<br /> <label style="color: black;">Edition : </label> <input
+				type="text" placeholder="provide book edition" name="Edition"
+				required> <br /> <label style="color: black;">Publication
+				: </label> <input type="text" placeholder="provide book Publication"
+				name="Publish" required> <br /> <label style="color: black;">
+				Quantity : </label> <input type="number" placeholder="Ex.1/2/3"
+				name="Quantity" required> <br /> <label
+				style="color: black;"> Avalability : </label> <input
+				list="Available" placeholder="select category" id="avail"
+				value="YES" name="available" readonly>
+			<datalist id="Available">
+				<option value="YES">
+				<option value="NO">
+			</datalist>
+			<br />
+
+			<button class="btn" type="submit">ADD BOOK</button>
+			<br />
+
+
+		</div>
+	</form>
+</body>
+</html>

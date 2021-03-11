@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Student Login</title>
+	<style>
+		
+
+		button {
+			width: 50%;
+			font-size: 20px;
+			color: white;
+			padding: 15px;
+			border: none;
+			cursor: pointer;
+			border-radius: 15px;
+		}
+
+		button:hover {
+			opacity: 0.7;
+		}
+
+		form {
+			text-align: center;
+			margin-top: 50px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		input[type=number],
+		input[type=password] {
+			width: 100%;
+			margin: 8px 0;
+			padding: 12px 20px;
+			display: inline-block;
+			border: 1.5px solid grey;
+			box-sizing: border-box;
+			border-radius: 12px;
+			font-size: 17px;
+		}
+
+
+		.container img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			height: 100px;
+			width: 100px;
+		}
+
+		body {
+			background-image: linear-gradient(to right, rgb(231, 231, 194), rgb(96, 231, 194));
+			background-position: center;
+		}
+
+		.input-icons i {
+			position: absolute;
+		}
+
+		.input-icons {
+			width: 100%;
+			margin-bottom: 0px;
+			color: black;
+		}
+
+		.icon {
+			padding: 10px;
+			min-width: 50px;
+		}
+
+		.input-field {
+			width: 100%;
+			padding: 5px;
+			background-image: linear-gradient(to right, #e6eeff, white);
+			text-align: center;
+		}
+
+		.btn {
+			width: 40%;
+			margin-top: 10px;
+			background-color: darkblue;
+		}
+
+		.cl,
+		b {
+			color: white;
+			margin-left: 10px;
+		}
+
+		.footer {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			color: white;
+			font-size: 18px;
+			margin: 10px;
+		}
+
+		.top-nav {
+			position: fixed;
+			right: 20px;
+			z-index: 1;
+		}
+
+		li,
+		ul {
+			float: left;
+			list-style-type: none;
+		}
+
+		ul>a {
+			text-decoration: none;
+			font-size: 20px;
+			color: black;
+			font-weight:bold;
+			transition: all 0.3s ease;
+		}
+ul>a:hover{
+color:red;}
+		.heading {
+			position: fixed;
+			top: 10px;
+			text-align: center;
+			color: white;
+			width: 100%;
+		}
+
+		.icon-pos {
+			margin-top: 14px;
+			padding-left: 0px;
+		}
+
+		.container {
+			text-align: center;
+			color: white;
+		}
+		.logo{
+		margin-top: 0px;}
+	</style>
+</head>
+
+<body align:center>
+<img class="logo" src="image/logo7.png" width="200px" height="150px" style="float: left; margin-top: 0px;"></li>
+<br><br><br><br><br>
+	<div class="top-nav">
+		<li>
+			
+					    <ul><a href="Homepage1.html">Home</a><ul>
+			
+					
+			
+		</li>
+	</div>
+	
+	
+	<div class="container">
+		<form action=Student_login_servlet method=get>
+
+			<img src="image/student.png" style="width:200px;height:200px; margin-right: 430px; margin-top: 0px;">
+			<h2 style="color:black;">Student Login</h2>
+			<div style="max-width: 300px; margin: auto">
+				<div class="input-icons">
+					<i class="fa fa-user icon icon-pos"></i> <input class="input-field" type="number"
+						placeholder="Enter Username " name="UserId" required>
+					<i class="fa fa-key icon icon-pos"></i> <input class="input-field" type="password"
+						placeholder="Enter Password" name="password" required><br>
+					<button class="btn" type="submit">Login</button>
+					<br />
+					<br />
+				</div>
+				<div class="cl">
+					<table>
+						<tr>
+							<td><input type="checkbox" checked="checked"><span style="color:black;"> Remember me</span>
+							</td>
+							<th><a href="pass_reset.html"> <b style="color: blue;">Forgot Password?</b>
+								</a></th>
+						</tr>
+						<tr>
+							<td style="text-align: center;"><span style="color:black;"> New User</span></td>
+							<td><a href="StudentRegistration.html">
+									<b style="color: blue;">Sign Up</b>
+								</a></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+		</form>
+	</div>
+</body>
+
+</html>

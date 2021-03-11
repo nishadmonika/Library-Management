@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Reset password</title>
+<style type="text/css">
+body {background-image: linear-gradient(to right, rgb(231, 231, 194), rgb(96, 231, 194));
+
+}
+.container{
+margin-left: 300px;}
+</style>
+</head>
+<body>
+<img class="logo" src="image/logo7.png" width="200px" height="150px" style="float: left; margin-top: 0px;">
+<a href='LibLogin.jsp' style='float:right;  background-image: linear-gradient(to bottom right, white,brown);color:black; margin:10px; border-radius: 20px; font-weight:bold; text-decoration:none;'><div class='back-btn'>Go Back</a>
+<br><br><br><br><br><br><br><br><br><br><br>
+<form class="container" ACTION="ResetPasswordLib" METHOD=Get>
+<h2>Please Enter Your Registered MailId</h2>
+ <label style="color: black; margin-left: auto; margin-right: auto;" for="email"><b>Email
+						ID</b></label> <input type="email" placeholder="abc@xyz.com" id="email"
+					name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+					title="enter valid email" required>
+					<button style="border-radius: 20px;" type=submit class="btn">Retrieve Password</button>
+					</form>
+</body>
+</html>

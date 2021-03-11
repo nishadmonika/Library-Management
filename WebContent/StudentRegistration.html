@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>user Registration</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+
+body, html {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {				background-image: linear-gradient(to right, rgb(231, 231, 194), rgb(96, 231, 194));
+
+
+	
+}
+.top-nav {
+			position: fixed;
+			right: 20px;
+			z-index: 1;
+		}
+
+		li,
+		ul {
+			float: left;
+			list-style-type: none;
+		}
+
+		ul>a {background-image: linear-gradient(to bottom right, white,brown);;
+			text-decoration: none;
+			font-size: 20px;
+			color: black;
+			font-weight:bold;
+			transition: all 0.3s ease;
+		}
+ul>a:hover{
+color:white;}
+.container {
+	height: 100%;
+	position: center;
+	align: center;
+	margin: auto;
+	width: 500px;
+	padding: 16px;
+	border-radius: 30px;
+	border: 1px solid black;
+}
+
+input[type=text], input[type=email], input[type=file], input[type=number],
+	input[type=text], input[type=number], input[type=text], input[type=password],
+	input[type=password] {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 10px 0;
+	border: none;
+	background: #f1f1f1;
+	border-radius: 20px;
+	background-image: linear-gradient(180deg, #f0f5f5, #85adad);
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=file]:focus,
+	input[type=number]:focus, input[type=number]:focus, input[type=text]:focus,
+	input[type=number]:focus, input[type=password]:focus, input[type=password]:focus
+	{
+	background-color: #ddd;
+	outline: none;
+}
+
+.btn {
+	background-color: #4CAF50;
+	color: black;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+}
+
+.btn:hover {
+	opacity: 1;
+}
+
+.signin {
+	background-image: linear-gradient(180deg, #f0f5f5, #85adad);
+	text-align: center;
+	color: black;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+h1 {
+	color: black;
+	background-image: linear-gradient(180deg, #ccccff, #ffffff);
+}
+}
+</style>
+<script>
+var check = function() {
+	  if (document.getElementById('password').value ==
+	    document.getElementById('confirm_password').value) {
+	    document.getElementById('message').style.color = 'green';
+	    document.getElementById('message').innerHTML = 'matching';
+	  } else {
+	    document.getElementById('message').style.color = 'red';
+	    document.getElementById('message').innerHTML = 'not matching';
+	  }
+	}
+
+function myFunction() {
+
+  
+       var aadhar = document.getElementById("txtAadhar").value;
+            var adharcardTwelveDigit = /^\d{12}$/;
+            var adharSixteenDigit = /^\d{16}$/;
+            if (aadhar != '') {
+                if (aadhar.match(adharcardTwelveDigit)) {
+                    document.getElementById('message1').style.color = 'green';
+    document.getElementById('message1').innerHTML = 'valid';
+                }
+                else if (aadhar.match(adharSixteenDigit)) {
+                        document.getElementById('message1').style.color = 'green';
+        document.getElementById('message1').innerHTML = 'valid';
+                }
+                else {
+                    document.getElementById('message1').style.color = 'red';
+    document.getElementById('message1').innerHTML = 'Invalid';
+                }
+            }
+}
+	</script>
+</head>
+
+<body>
+ <img class="logo" src="image/logo7.png" width="200px" height="150px" style="float: left; margin-top: 0px;">
+ <div class="top-nav">
+		<li>
+			
+					    <ul><a href="Homepage1.html">Home</a><ul>
+			
+					
+			
+		</li>
+	</div>
+	<div class="bg-img">
+		<form class="container" ENCTYPE="multipart/form-data"
+			ACTION="registrationServlet" METHOD=POST>
+			<div class="form">
+				<h1 style="border-radius: 20px;">
+					<center>User Registration</center>
+				</h1>
+				<p style="color: black;">Please fill in this form to create an
+					account.</p>
+				<hr>
+
+				<label style="color: black;" for="name"><b>Full Name</b></label> <input
+					type="text" placeholder="Enter full name" name="name" id="name"
+					pattern="[A-Za-z]{3,}" title="Name only contains Alphabets"
+					onKeyUp="Name();" required>
+
+				<script>
+function Name() {
+  var x = document.getElementById("name");
+  x.value = x.value.toUpperCase();
+}
+	</script>
+				<label style="color: black;" for="fname"><b>Father's
+						Name</b></label> <input type="text" placeholder="Enter name" name="fname"
+					id="fname" pattern="[A-Za-z]{3,}"
+					title="Name only contains Alphabets" onKeyUp="FName();" required>
+				<script>
+function FName() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+	</script>
+				<label style="color: black;" for=gender><b>Gender </b></label><br>
+				<input type="radio" id="male" name="gender" value="MALE"> <label
+					for="male" style="color: black;">Male</label><br> <input
+					type="radio" id="female" name="gender" value="FEMALE"> <label
+					for="female" style="color: black;">Female</label><br>
+				<script>
+function Gender() {
+  var x = document.getElementById("gender");
+  x.value = x.value.toUpperCase();
+}
+	</script>
+				<label style="color: black;" for="adhaar"><b>Adhaar Card
+						no.</b></label> <input type="number" placeholder="Enter your digit adhaar no."
+					id="txtAadhar" name="adhaar" onkeyup="myFunction();" required>
+				<span id='message1'></span> <label style="color: black;" for="email"><b>Email
+						ID</b></label> <input type="email" placeholder="abc@xyz.com" id="email"
+					name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+					title="enter valid email" required> <label
+					style="color: black;" for="cno"><b>Contact No.</b></label> <input
+					type="text" placeholder="Enter contact no." name="cno"
+					pattern="[0-9]{10}" title="phone number should be of 10 digits"
+					required> <label style="color: black;" for="pswd"><b>Create
+						Password</b></label> <input type="password" placeholder="Create a password"
+					name="pswd" id="password"
+					pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+					title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+					onkeyup='check();' required> <label style="color: black;"
+					for="cpswd"><b>Confirm Password</b></label> <input type="password"
+					placeholder="Confirm your password" id="confirm_password"
+					name="cpswd" onkeyup='check();' required> <span
+					id='message'></span> <label style="color: black;" for="img"><b>Upload
+						Scan copy of Adhaar Card</b></label> <input NAME="file" TYPE="file"
+					accept="image/*">
+				<button style="border-radius: 20px;" type=submit class="btn">Register</button>
+			</div>
+
+			<div style="border-radius: 20px; margin-top: 2px;" class="signin">
+				<p>
+					Already have an account? <a href="student_login.html">Sign in</a>.
+				</p>
+				<span class="psw"> <a href="pass_reset.html">Forgotpassword?</a></span>
+			</div>
+		</form>
+	</div>
+</body>
+
+
+</html>
